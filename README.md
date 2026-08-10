@@ -278,22 +278,6 @@ Full schema: [`DB.sql`](DB.sql) · ERD: [`docs/erd.png`](docs/erd.png)
 
 ---
 
-## Screenshots
-
-| Home | Product Detail |
-|:---:|:---:|
-| ![Home](screenshots/01-home.png) | ![Product Detail](screenshots/02-product-detail.png) |
-
-| AI Chatbot | Order Tracking |
-|:---:|:---:|
-| ![Chatbot](screenshots/03-chatbot.png) | ![Tracking](screenshots/04-order-tracking.png) |
-
-| Admin Dashboard | Order Management |
-|:---:|:---:|
-| ![Admin Dashboard](screenshots/05-admin-dashboard.png) | ![Order Management](screenshots/06-order-management.png) |
-
----
-
 ## Related Documents
 
 | Document | Path |
