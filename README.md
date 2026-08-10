@@ -278,18 +278,6 @@ Full schema: [`DB.sql`](DB.sql) · ERD: [`docs/erd.png`](docs/erd.png)
 
 ---
 
-## Related Documents
-
-| Document | Path |
-|:---|:---|
-| Architecture diagram | [`docs/architecture.png`](docs/architecture.png) |
-| ERD | [`docs/erd.png`](docs/erd.png) |
-| Use case diagram | [`docs/usecase.png`](docs/usecase.png) |
-| Sequence diagrams | [`docs/sequence-diagrams/`](docs/sequence-diagrams/) |
-| Database script | [`DB.sql`](DB.sql) |
-
----
-
 ## Author
 
 **Mai Thị Thanh Huyền**
