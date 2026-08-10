@@ -57,32 +57,32 @@ Nõn Café is a full-stack B2C e-commerce platform built from scratch with **Jav
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│                          Client                               │
-│              Customers · Guests · Admin                       │
+│                          Client                              │
+│              Customers · Guests · Admin                      │
 └──────────────────────────────────────────────────────────────┘
                               │ HTTPS
                               ▼
 ┌──────────────────────────────────────────────────────────────┐
-│                          VIEW LAYER                           │
-│         JSP · HTML5 · CSS3 · Bootstrap 5 · JavaScript         │
+│                          VIEW LAYER                          │
+│         JSP · HTML5 · CSS3 · Bootstrap 5 · JavaScript        │
 └──────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌──────────────────────────────────────────────────────────────┐
-│                       CONTROLLER LAYER                        │
-│                Java Servlet (MVC Pattern)                     │
+│                       CONTROLLER LAYER                       │
+│                Java Servlet (MVC Pattern)                    │
 │  ┌───────────────┬──────────────┬────────────────────────┐   │
-│  │  GHNService   │GeminiService │    EmailService         │   │
-│  │  VNPayConfig  │GoogleOAuth2  │    IntentDetector        │   │
-│  │  GHNApiServlet│ChatbotServlet│    ContextExtractor       │   │
+│  │  GHNService   │GeminiService │    EmailService        │   │
+│  │  VNPayConfig  │GoogleOAuth2  │    IntentDetector      │   │
+│  │  GHNApiServlet│ChatbotServlet│    ContextExtractor    │   │
 │  └───────────────┴──────────────┴────────────────────────┘   │
 └──────────────────────────────────────────────────────────────┘
                               │ JDBC / DAO Pattern
                               ▼
 ┌──────────────────────────────────────────────────────────────┐
-│                          MODEL LAYER                           │
-│                     MySQL 8.0+ Database                       │
-│                 Dao.java · Entity Classes                     │
+│                          MODEL LAYER                         │
+│                     MySQL 8.0+ Database                      │
+│                 Dao.java · Entity Classes                    │
 └──────────────────────────────────────────────────────────────┘
 
 External services:  GHN API · VNPay · Gmail SMTP · Gemini AI · Google OAuth2
@@ -123,9 +123,9 @@ IntentDetector          → classifies: product question / general chat / order 
 ContextExtractor +
 ConversationContext      → maintains session-based conversation state
      │
-     ├─ [Product question] → query product_profile table ──┐
-     │                                                      │
-     └─ [General chat] ───────────────────────────────────►┤
+     ├─ [Product question] → query product_profile table   ──┐
+     │                                                       │
+     └─ [General chat] ───────────────────────────────────►  ┤
                                                              ▼
                                           ConsultantPromptBuilder
                                           → builds a grounded, context-aware prompt
@@ -246,8 +246,9 @@ CafeTN/
 │   ├── AdminControl/          # Admin CRUD servlets (products, orders, ...)
 │   ├── Controller/            # Customer-facing servlets (checkout, GHN, OAuth, VNPay)
 │   ├── Dao/                   # DAO pattern — Dao.java, DBConnection.java
+│   ├── connection/            # DBConnection.java
 │   ├── Entity/                # Order, Product, User, TrackingLog, CartItem, ...
-│   └── Service/                # External integrations + chatbot logic
+│   └── Service/               # External integrations + chatbot logic
 │       ├── GHNService.java
 │       ├── GeminiService.java
 │       ├── EmailService.java
@@ -257,10 +258,11 @@ CafeTN/
 │       ├── ConversationContext.java
 │       └── ConsultantPromptBuilder.java
 ├── WebContent/
-│   ├── doc/                   # Admin JSPs
+│   ├── doc/                   
 │   ├── chatbot.jsp
 │   ├── checkout.jsp
 │   ├── payment-method.jsp
+│   ├── ....
 │   └── WEB-INF/web.xml
 ├── DB.sql
 └── README.md
